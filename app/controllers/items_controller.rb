@@ -11,10 +11,13 @@ class ItemsController < ApplicationController
   end
 
   def show
+     @item = Item.find(params[:id])
+     @haves = @item.have_users
+     @wants = @item.want_users
   end
 
   private
   def set_item
-    @item = Item.find(params[:id])
+     @item = Item.find(params[:id])
   end
 end

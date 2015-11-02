@@ -1,3 +1,8 @@
+<!--ここから-->
+<% content_for :title do -%>
+ <%= user.name %>-monolist
+<% end %>
+<!--ここまで-->
 <div class="user-profile">
   <div class="icon">
     <%= gravatar_for user, size: 100 %>
@@ -22,13 +27,13 @@
       <li>
         <div class="status-label">WANT</div>
         <div id="want_count" class="status-value">
-          789
+          <%= user.wants.count %>  <!--追加-->
         </div>
       </li>
       <li>
         <div class="status-label">HAVE</div>
         <div id="have_count" class="status-value">
-          123
+          <%= user.haves.count %>  <!--追加-->
         </div>
       </li>
     </ul>
