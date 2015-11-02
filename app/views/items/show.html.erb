@@ -1,9 +1,7 @@
 <!--ここから-->
-<% content_for :title do -%>
- <%= @item.title %>-monolist
-<% end %>
-<% content_for :description do -%>
- <%= @item.title %> に関する情報です。この商品をほしい人と持っている人を表示しています。
+<% content_for :head do %>
+<title><%= @item.title %></title>
+ <meta name="description" content="<%= @item.title %>に関する情報です。この商品をほしい人と持っている人を表示しています。">
 <% end %>
 <!--ここまで-->
 <div class="container">
