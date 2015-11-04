@@ -6,7 +6,6 @@
   </div>
 </div>
 
-
 <ol class="container-inner inner-default clearfix">
   <% @haves.each do |item| %>
    <div class="item-box">
@@ -20,12 +19,13 @@
         <% end %>
       </div> 
     </div>  
-    <div class="detail">
+     <div class="detail">
       <p class="title">
         <%= item.title %>
       </p>
      </div>
-     </li>
+      <%= render 'items/action' , item: item if logged_in? %>
+    </li>
    </div>
   <% end %>
 </ol>

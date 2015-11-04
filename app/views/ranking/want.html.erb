@@ -19,12 +19,13 @@
         <% end %>
       </div> 
     </div>  
-    <div class="detail">
+     <div class="detail">
       <p class="title">
         <%= item.title %>
       </p>
      </div>
-     </li>
+    </li>
+     <%= render 'items/action' , item: item if logged_in? %>
    </div>
   <% end %>
 </ol>
