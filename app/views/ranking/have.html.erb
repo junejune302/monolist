@@ -1,0 +1,34 @@
+<div class="cover">
+  <div class="cover-inner">
+    <div class="cover-contents">
+      <h1>みんながHAVEしたモノTOP10</h1>
+    </div>
+  </div>
+</div>
+
+
+<ol class="container-inner inner-default clearfix">
+  <% @haves.each do |item| %>
+   <div class="item-box">
+    <li>
+     <div class="image">
+      <div class="img-wrap">
+        <% if item.large_image.present? %>
+          <%= image_tag(item.large_image, alt: item.title) %>
+        <% else %>
+          <%= image_tag("no-image.png",  alt: item.title) %>
+        <% end %>
+      </div> 
+    </div>  
+    <div class="detail">
+      <p class="title">
+        <%= item.title %>
+      </p>
+     </div>
+     </li>
+   </div>
+  <% end %>
+</ol>
+
+
+
